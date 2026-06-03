@@ -11,3 +11,9 @@ missing_codes = master_codes - nav_codes
 print("Total Fund Master Codes:", len(master_codes))
 print("Total NAV Codes:", len(nav_codes))
 print("Missing Codes:", missing_codes)
+
+if len(missing_codes) == 0:
+    print("All AMFI codes are valid.")
+else:
+    print("Some AMFI codes are missing.")
+    

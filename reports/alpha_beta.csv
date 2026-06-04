@@ -1,0 +1,9 @@
+from scipy.stats import linregress
+
+beta, alpha, r, p, se = linregress(
+    benchmark_returns,
+    fund_returns
+)
+
+print(alpha)
+print(beta)

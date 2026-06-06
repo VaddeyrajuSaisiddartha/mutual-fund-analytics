@@ -49,3 +49,4 @@ for scheme_name, code in schemes.items():
         print(f"ERROR: {scheme_name} -> {e}")
 
 print("\nNAV Fetch Completed!")
+                                            

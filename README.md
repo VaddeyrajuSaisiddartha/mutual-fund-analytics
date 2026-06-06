@@ -1,148 +1,206 @@
 # Mutual Fund Analytics & Risk Intelligence Dashboard
 
-## Project Overview
+## Executive Summary
 
-This project was developed as part of the Bluestock Mutual Fund Analytics Capstone Project. The objective is to analyze mutual fund performance, investor behavior, industry trends, and risk metrics using Python, SQL, SQLite, and Power BI.
+The Mutual Fund Analytics & Risk Intelligence Dashboard is an end-to-end data analytics project designed to evaluate mutual fund performance, investor behavior, industry trends, and risk-adjusted returns. The project integrates data engineering, exploratory data analysis, financial risk analytics, database management, and business intelligence reporting into a unified analytics platform.
 
-The project includes data ingestion, cleaning, exploratory data analysis (EDA), performance analytics, risk analytics, and an interactive Power BI dashboard.
+Using Python, SQLite, SQL, and Power BI, the project transforms raw mutual fund datasets into actionable insights for investors, fund managers, and financial analysts.
 
 ---
 
-## Objectives
+## Business Problem
 
-* Analyze mutual fund industry trends.
-* Evaluate fund performance using risk-adjusted metrics.
-* Study investor transaction patterns.
-* Build an interactive dashboard for decision-making.
-* Generate insights for investors and fund managers.
+The Indian mutual fund industry has witnessed significant growth in assets under management (AUM), investor participation, and systematic investment plans (SIPs). However, investors often struggle to evaluate funds using comprehensive risk-adjusted metrics and industry trends.
+
+This project addresses that challenge by providing:
+
+* Performance evaluation of mutual funds.
+* Risk analytics using industry-standard metrics.
+* Investor demographic and transaction analysis.
+* Interactive dashboard-based decision support.
+
+---
+
+## Project Objectives
+
+* Build a robust ETL pipeline for mutual fund datasets.
+* Clean, validate, and store data using SQLite.
+* Perform exploratory data analysis to identify trends.
+* Calculate advanced performance and risk metrics.
+* Develop an interactive Power BI dashboard.
+* Generate actionable insights from investor and fund data.
 
 ---
 
 ## Technology Stack
 
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Plotly
-* SQLite
-* SQLAlchemy
-* Power BI
-* Git & GitHub
+| Category        | Tools & Technologies        |
+| --------------- | --------------------------- |
+| Programming     | Python                      |
+| Data Analysis   | Pandas, NumPy               |
+| Visualization   | Matplotlib, Seaborn, Plotly |
+| Database        | SQLite                      |
+| ORM             | SQLAlchemy                  |
+| Dashboarding    | Power BI                    |
+| Version Control | Git, GitHub                 |
 
 ---
 
-## Project Structure
+## Project Architecture
 
-bluestock_mf_capstone/
-
-data/
-
-* raw/
-* processed/
-
-notebooks/
-
-* 01_data_ingestion.ipynb
-* 02_data_cleaning.ipynb
-* 03_eda_analysis.ipynb
-* 04_performance_analytics.ipynb
-* 05_advanced_analytics.ipynb
-
-scripts/
-
-* live_nav_fetch.py
-* etl_pipeline.py
-* compute_metrics.py
-* recommender.py
-
-sql/
-
-* schema.sql
-* queries.sql
-
-dashboard/
-
-* bluestock_mf_dashboard.pbix
-
-reports/
-
-* Dashboard.pdf
-* Final_Report.pdf
-* Bluestock_MF_Presentation.pptx
+Data Sources → Data Ingestion → Data Cleaning → SQLite Database → Analytics Engine → Power BI Dashboard → Business Insights
 
 ---
 
-## Key Features
+## Project Workflow
 
-### Data Engineering
+### Phase 1: Data Ingestion
 
-* Data ingestion from CSV files.
-* Live NAV fetching using MFAPI.
-* Data validation and cleaning.
-* SQLite data warehouse implementation.
+* Imported multiple mutual fund datasets.
+* Integrated live NAV data using MFAPI.
+* Performed initial data validation and profiling.
 
-### Exploratory Data Analysis
+### Phase 2: Data Engineering
+
+* Cleaned missing and inconsistent records.
+* Standardized formats and business rules.
+* Designed a star-schema-inspired SQLite database.
+
+### Phase 3: Exploratory Data Analysis
 
 * NAV trend analysis.
+* SIP inflow analysis.
 * AUM growth analysis.
-* SIP inflow trends.
 * Folio growth analysis.
-* Sector allocation analysis.
+* Category and sector analysis.
 
-### Performance Analytics
+### Phase 4: Performance & Risk Analytics
 
-* CAGR Calculation
+* CAGR Analysis
 * Sharpe Ratio
 * Sortino Ratio
 * Alpha & Beta
 * Maximum Drawdown
-* Rolling Sharpe Ratio
-
-### Risk Analytics
-
 * Historical VaR (95%)
 * Conditional VaR (CVaR)
-* Fund Scorecard
-* Benchmark Comparison
+* Rolling Sharpe Ratio
 
-### Dashboard Pages
+### Phase 5: Business Intelligence Dashboard
 
-#### Executive Overview
-
-Industry-wide KPIs and trend analysis.
-
-#### Risk Analytics
-
-Sharpe Ratio, Sortino Ratio, VaR, and Maximum Drawdown.
-
-#### Fund Analysis
-
-Fund category and risk category analysis.
-
-#### Investor Analytics
-
-Investor demographics, transaction behavior, and geographic insights.
+* Executive Overview
+* Risk Analytics
+* Fund Analysis
+* Investor Analytics
 
 ---
 
-## Key Findings
+## Dashboard Overview
 
-* Mutual fund folios increased significantly between 2022 and 2025.
-* SIP inflows demonstrated steady growth across the analysis period.
-* Several funds achieved superior risk-adjusted performance measured by Sharpe and Sortino Ratios.
-* Investor participation was concentrated in selected states and city tiers.
-* Equity-oriented funds dominated industry inflows and folio growth.
+### Executive Overview
+
+Provides industry-level KPIs including:
+
+* Total AUM
+* Total SIP Inflows
+* Total Schemes
+* Total Folios
+* AUM Trends
+
+### Risk Analytics
+
+Provides:
+
+* Sharpe Ratio Analysis
+* Sortino Ratio Analysis
+* Value at Risk (95%)
+* Maximum Drawdown Analysis
+
+### Fund Analysis
+
+Provides:
+
+* Category Distribution
+* Risk Category Distribution
+* Fund House Analysis
+* Sub-Category Analysis
+
+### Investor Analytics
+
+Provides:
+
+* State-wise Investment Analysis
+* Gender Distribution
+* Age Group Analysis
+* Transaction Type Analysis
+* Monthly Transaction Trends
+
+---
+
+## Key Insights
+
+* SIP inflows demonstrated strong growth throughout the analysis period.
+* Equity-oriented funds dominated industry participation.
+* Risk-adjusted performance varied significantly across schemes.
+* Investor participation was concentrated within key states and urban centers.
+* Several funds achieved superior Sharpe and Sortino ratios, indicating strong risk-adjusted returns.
+
+---
+
+## Repository Structure
+
+bluestock_mf_capstone/
+
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+├── notebooks/
+│   ├── 01_data_ingestion.ipynb
+│   ├── 02_data_cleaning.ipynb
+│   ├── 03_eda_analysis.ipynb
+│   ├── 04_performance_analytics.ipynb
+│   └── 05_advanced_analytics.ipynb
+│
+├── scripts/
+│   ├── etl_pipeline.py
+│   ├── live_nav_fetch.py
+│   ├── compute_metrics.py
+│   └── recommender.py
+│
+├── sql/
+│   ├── schema.sql
+│   └── queries.sql
+│
+├── dashboard/
+│   └── bluestock_mf_dashboard.pbix
+│
+├── reports/
+│   ├── Dashboard.pdf
+│   ├── Final_Report.pdf
+│   └── Bluestock_MF_Presentation.pptx
+│
+└── README.md
+
+---
+
+## Future Enhancements
+
+* Automated NAV data refresh.
+* Streamlit web application deployment.
+* Portfolio optimization using Modern Portfolio Theory.
+* Monte Carlo simulations for fund forecasting.
+* Automated reporting and alerting framework.
 
 ---
 
 ## Author
 
-Vaddeyraju Sai Siddartha
+**Vaddeyraju Sai Siddartha**
+
+Mutual Fund Analytics & Risk Intelligence Dashboard Project
 
 ---
 
 ## License
 
-Academic Project – Bluestock Mutual Fund Analytics Capstone.
+This project was developed for academic and portfolio purposes.

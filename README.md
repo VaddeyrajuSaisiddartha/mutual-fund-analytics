@@ -1,4 +1,4 @@
-# Mutual Fund Analytics & Risk Intelligence Dashboard
+# Mutual Fund Analytics & Risk Intelligence Dashboard 
 
 ## Project Overview
 
@@ -172,7 +172,7 @@ MutualFundAnalytics/
 
 **Vaddeyraju Sai Siddartha**
 
-Data Analytics Intern 
+Data Analytics Intern at Blue Stock 
 
 ---
 

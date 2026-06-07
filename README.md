@@ -172,7 +172,7 @@ MutualFundAnalytics/
 
 **Vaddeyraju Sai Siddartha**
 
-Data Analytics Intern
+Data Analytics Intern 
 
 ---
 
